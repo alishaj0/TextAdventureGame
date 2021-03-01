@@ -1,3 +1,7 @@
+// GHOSTBUSTERS Text Adventure Game
+
+//Create variables and values first, listed. Then create alerts/prompts etc. 
+
 const enter = "Please enter 1 or 2 for your answer";
 const gameOver = "Sorry GAME OVER!";
 const start = `Welcome to the Ghostbusters Text Adventure Game. Click 'OK' to start the game.`;
@@ -33,3 +37,38 @@ ${enter}`;
 const gameOver5 = `You looked at the trap and the light BLINDED YOU! ${gameOver}`;
 const win = `The ghost trap sucked Slimer in and closed. CONGRATULATIONS! YOU CAUGHT SLIMER!!!`;
 
+// Alerts the user to start the game
+alert(start);
+
+// prompt(q1) Explains scene to user and asks to choose option 1 or 2
+// userInput Sets the value of userInput to the number the user enters
+let userInput = prompt(q1);
+
+if (userInput == 1) {
+    userInput = prompt(q2);
+    if (userInput == 1) {
+        userInput = prompt(q3);
+        if (userInput == 2) {
+            userInput = prompt(q4);
+            if (userInput == 1) {
+                userInput = prompt(q5);
+                if (userInput == 2) {
+                    userInput = alert(win);
+                } else {
+                    alert(gameOver5);
+                }
+            } else {
+                alert (gameOver4);
+            }
+        } else {
+            alert(gameOver3);
+        }
+    } else {
+        alert(gameOver2);
+    }
+} else {
+    alert(gameOver1);
+}
+
+//userInput is set at q1. IF statement is user answers q1 == #, will prompt to q2 and reset the value for userInput to q2. with ELSE statement leading to gameOver prompt.
+//With new value set for userInput = q2, IF user answers (userInput == # ) will prompt to next question or ELSE {alert (gameover#)} statement is nested within previous IF statement
