@@ -72,3 +72,4 @@ if (userInput == 1) {
 
 //userInput is set at q1. IF statement is user answers q1 == #, will prompt to q2 and reset the value for userInput to q2. with ELSE statement leading to gameOver prompt.
 //With new value set for userInput = q2, IF user answers (userInput == # ) will prompt to next question or ELSE {alert (gameover#)} statement is nested within previous IF statement
+
